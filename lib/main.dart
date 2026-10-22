@@ -17,19 +17,28 @@ class MyLatihan extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       ),
       darkTheme: ThemeData.dark(useMaterial3: true),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Row(children: [Center(child: Text('Latihan'))]),
-          leading: Icon(Icons.access_alarms_outlined),
-          actions: [
-            Icon(Icons.abc),
-            Icon(Icons.ac_unit_sharp),
-            Icon(Icons.account_balance_wallet_sharp),
-          ],
-          backgroundColor: Colors.deepOrangeAccent,
-        ),
-        body: Center(child: Text('Hello, World!')),
+      home: const MyHomepage(),
+    );
+  }
+}
+
+class MyHomepage extends StatelessWidget {
+  const MyHomepage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Row(children: [Center(child: Text('Latihan'))]),
+        leading: Icon(Icons.access_alarms_outlined),
+        actions: [
+          Icon(Icons.abc),
+          Icon(Icons.ac_unit_sharp),
+          Icon(Icons.account_balance_wallet_sharp),
+        ],
+        backgroundColor: Colors.deepOrangeAccent,
       ),
+      body: Center(child: Text('Hello, World!')),
     );
   }
 }
