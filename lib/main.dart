@@ -10,27 +10,28 @@ class MyLatihan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'DASH-DASH',
+      title: 'Aplikasi Mahasiswa',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       ),
       darkTheme: ThemeData.dark(useMaterial3: true),
-      home: const MyHomepage(),
+      home: const ProfilePage(),
     );
   }
 }
 
-class MyHomepage extends StatelessWidget {
-  const MyHomepage({super.key});
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Row(children: [Center(child: Text('Latihan'))]),
-        leading: Icon(Icons.access_alarms_outlined),
+        title: Row(
+          children: [Icon(Icons.school), Text(' Dashboard Mahasiswa')],
+        ),
         actions: [
           Icon(Icons.abc),
           Icon(Icons.ac_unit_sharp),
@@ -38,7 +39,12 @@ class MyHomepage extends StatelessWidget {
         ],
         backgroundColor: Colors.deepOrangeAccent,
       ),
-      body: Center(child: Text('Hello, World!')),
+      body: Center(
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [Icon(Icons.waving_hand), Text(' Hello, World!')],
+        ),
+      ),
     );
   }
 }
